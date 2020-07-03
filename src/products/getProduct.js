@@ -31,7 +31,7 @@ const HttpStatusCodes = require('http-status-codes');
 function getProduct(argsForBuilder) {
 
 
-    const builder = new ProductGraphQlRequestBuilder('http://internal-hpwszmy-gopegmkbduhfw.us-4.magentosite.cloud/graphql', __dirname + '/searchProducts.graphql', argsForBuilder);
+    const builder = new ProductGraphQlRequestBuilder(argsForBuilder.endPoint+'graphql', __dirname + '/searchProducts.graphql', argsForBuilder);
 
     const requestOptions = builder.build();
     let request = httpRequest(requestOptions);

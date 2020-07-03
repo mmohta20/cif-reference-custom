@@ -100,14 +100,16 @@ class ProductsLoader {
                 let options = {};
                 options.filter = filters;
                 options.sort=[];
-				options.q = actionParameters.query;
+                options.q = actionParameters.query;
+                options.endPoint = actionParameters.magentoEndPoint;
                 return getProduct(options);
             } else if (params.filter.sku && params.filter.sku.in) { // Get multiple products by skus
                 let filters = ['sku:'+params.filter.sku.in];
                 let options = {};
                 options.filter = filters;
                 options.sort=[];
-				options.q = actionParameters.query;
+                options.q = actionParameters.query;
+                options.endPoint = actionParameters.magentoEndPoint;
                 return getProduct(options);
             }
             else if (params.filter.url_key && params.filter.url_key.in) { // Get multiple products by skus
@@ -115,7 +117,8 @@ class ProductsLoader {
                 let options = {};
                 options.filter = filters;
                 options.sort=[];
-				options.q = actionParameters.query;
+                options.q = actionParameters.query;
+                options.endPoint = actionParameters.magentoEndPoint;
                 return getProduct(options);
             }
         }

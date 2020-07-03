@@ -29,7 +29,8 @@ functions:
       web-export: true
     parameters:
       url: https://a-dummy-url.com # Demonstrates how parameters can be passed to GraphQL resolvers
-     
+      magentoEndPoint: https://internal-hpwszmy-gopegmkbduhfw.us-4.magentosite.cloud/    
+      token: z3ddp7q7sqkp1n7vnuee95a3qbzkduoz 
 
   cart:
     name: graphql-reference/cart
