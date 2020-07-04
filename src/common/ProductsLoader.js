@@ -93,7 +93,7 @@ class ProductsLoader {
                     }
                 ]
             });
-        } else if (params.filter && (params.filter.sku || params.filter.url_key)) { // Get a product by sku or url_key
+        } else if (params.filter && (params.filter.sku || params.filter.url_key || || params.filter.category_id)) { // Get a product by sku or url_key
             if ((params.filter.sku && params.filter.sku.eq) || (params.filter.url_key && params.filter.url_key.eq)) {
                 let key = params.filter.sku ? params.filter.sku.eq : params.filter.url_key.eq;
                 let filters = ['sku:'+key];
@@ -119,6 +119,12 @@ class ProductsLoader {
                 options.sort=[];
                 options.q = actionParameters.query;
                 options.endPoint = actionParameters.magentoEndPoint;
+                return getProduct(options);
+            }
+            else if (params.filter.category_id) { // Get multiple products by skus
+                let options = {};
+                options.sort=[];
+                options.q = actionParameters.query;
                 return getProduct(options);
             }
         }
