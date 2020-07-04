@@ -124,6 +124,7 @@ class ProductsLoader {
             else if (params.filter.category_id) { // Get multiple products by skus
                 let options = {};
                 options.sort=[];
+                options.endPoint = actionParameters.magentoEndPoint;
                 options.q = actionParameters.query;
                 return getProduct(options);
             }
