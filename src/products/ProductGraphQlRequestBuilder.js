@@ -22,7 +22,7 @@ class ProductGraphQlRequestBuilder {
 
     constructor(endpoint, template, requestArgs) {
         this.endpoint = endpoint;
-        this.requestArgs = requestArgs;
+        this.requestArgs = requestArgs.q;
         this.template = template;
         console.log(template);
         this.context = {};
@@ -30,7 +30,7 @@ class ProductGraphQlRequestBuilder {
 
     build() {
         // Parse arguments
-        this._parsePagination();
+        /*this._parsePagination();
         this._parseFullTextSearch();
         this._parseSorting();
         this._parseFilter();
@@ -38,13 +38,13 @@ class ProductGraphQlRequestBuilder {
 
        
         // Generate query
-        let query = this._generateQuery();
+        let query = this._generateQuery();*/
 
         return {
             method: 'POST',
             uri: this.endpoint,
             body: {
-                query: query,
+                query: this.requestArgs,
                 operationName: null,
                 variables: null
             },

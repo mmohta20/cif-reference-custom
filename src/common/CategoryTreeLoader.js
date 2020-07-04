@@ -72,8 +72,8 @@ class CategoryTreeLoader {
         // in an extra request if they are being requested in the GraphQL query.
 
         let options = {};
-        options.baseUrl = 'http://internal-hpwszmy-gopegmkbduhfw.us-4.magentosite.cloud/rest/all/V1/';
-        options.auth='bwku8kfea5yw8i8lv153su2g2dyu6es9';
+        options.baseUrl = actionParameters.magentoEndPoint+'rest/all/V1/';
+        options.auth=actionParameters.token;
         let baseClient = new Client(options);
         return  baseClient.getCategoryById(categoryId);
     }
