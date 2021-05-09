@@ -21,7 +21,7 @@
     "fs": "0.0.1-security",
     "graphql": "^14.5.8",
     "graphql-tools": "3.1.1",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "http-status-codes": "^1.4.0",
     "openwhisk": "^3.19.0",
     "request": "^2.88.2",
