@@ -38,7 +38,7 @@
     "mocha-multi-reporters": "^1.1.7",
     "mock-require": "^3.0.3",
     "nyc": "^14.1.1",
-    "serverless": "^1.49.0",
+    "serverless": "^3.25.1",
     "serverless-openwhisk": "^0.18.4",
     "serverless-webpack": "^5.3.1",
     "sinon": "^7.5.0",
